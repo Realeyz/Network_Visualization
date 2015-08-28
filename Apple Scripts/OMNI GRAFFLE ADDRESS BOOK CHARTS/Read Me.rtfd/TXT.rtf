@@ -1,0 +1,141 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf380
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande;\f1\fswiss\fcharset77 Helvetica;\f2\fnil\fcharset77 LucidaGrande-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red23\green126\blue230;\red0\green99\blue192;}
+\vieww14080\viewh25680\viewkind0
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+
+\f1 \cf0 {{\NeXTGraphic OmniGraffle.icns \width2560 \height2560
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+\cf0 {{\NeXTGraphic AddressBook.icns \width2560 \height2560
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+
+\f0 \cf0 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\fs14 \cf0 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\qc
+
+\fs48 \cf2 Address Book Chart Builder for OmniGraffle\cf3 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\fs24 \cf0 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li720\ri-2680\ql\qnatural
+
+\fs22 \cf0 This package demonstrates some of the possible interactions between Address Book and OmniGraffle using AppleScript. Three scripts are provided which automatically build charts based on Address Book information in three different ways. \
+\
+The new version of Address Book in Mac OS X 10.3 "Panther" includes several new options for contact information, including a field which lets you record relationships among your contacts such as "parent", "child", "friend", or "manager". The scripts in this package automatically build charts in OmniGraffle which visualize those relationships. Additionally, each person's entry in the chart will show their picture from Address Book and link to their email address.\
+\
+Three scripts are provided:\
+\pard\tx1080\tx2880\tx4320\tx5760\tx7200\li1080\fi-360\ri-2680\ql\qnatural
+\cf0  \'a5	
+\f2\b Make Family Tree Chart
+\f0\b0  will graph familial relationships such as parent, child, and spouse, resulting in a basic family-tree-style chart. (Sibling relationships aren't explicitly considered by the script, since they can be implied by the layout of parent/child relationships.)\
+ \'a5	
+\f2\b Make Org Chart
+\f0\b0  will graph business relationships such as manager and assistant, resulting in a basic organizational-style chart. The script can't create a standard "rake-style" org chart, but it's pretty simple to convert its output into one (see below).\
+ \'a5	
+\f2\b Make People Web Chart
+\f0\b0  will graph all relationships in a freeform chart centered on the person who's selected when you run the script \'d1 so you can easily see who's connected to whom and test the old "six degrees of separation" theory.\
+\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li720\ri-2680\ql\qnatural
+\cf0 Each of the three scripts starts with the people who are selected when you run it, so the finished chart will only contain people to whom those people directly or indirectly relate \'d1 you won't see unrelated contacts, and you won't see all the contacts in your address book unless they're all related to each other.\
+\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\qc
+
+\f2\b\fs32 \cf2 Installation\cf3 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\b0\fs14 \cf0 \
+\pard\tx1080\tx2880\tx4320\tx5760\tx7200\li1080\fi-360\ri-2680\ql\qnatural
+
+\fs22 \cf0 1.	Open your 
+\f2\b Library/Scripts/Address Book Scripts
+\f0\b0  folder in a new Finder window, creating it if it doesn't exist yet. (The Open Scripts Folder command in Address Book's Scripts menu can do this for you.)\
+2.	Drag any or all of the three icon(s) to the 
+\f2\b Address Book Scripts
+\f0\b0  window.\
+3.	If Address Book is already running, you'll need to choose 
+\f2\b Update Scripts Menu
+\f0\b0  for the scripts(s) to show up.\
+\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li720\ri-2680\ql\qnatural
+
+\f2\b \cf0 Advanced installation notes:
+\f0\b0  Which Library folder you use depends on whom you want a script to be available to; use ~/Library (in your home folder) to make it available only to you, or the top-level /Library to make it available for all users on your computer. (If you're on a network that has a /Network/Library server, installing there will make the script available to all network users.)\
+ \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\qc
+
+\f2\b\fs32 \cf2 Using the Scripts\cf3 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\b0\fs14 \cf0 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li720\ri-2680\ql\qnatural
+
+\fs22 \cf0 If you don't have any relationships in your Address Book yet, you'll want to create some. Select a person's card and click the 
+\f2\b Edit
+\f0\b0  button below it. If you don't see any empty fields labeled with relationship labels (such as "friend" and "assistant"), choose 
+\f2\b Add Field
+\f0\b0  > 
+\f2\b Related Names
+\f0\b0  from the 
+\f2\b Card
+\f0\b0  menu. Fill in the name of another contact, and click on the relationship label to pop up a menu from which you can select the appropriate relationship. (For example, if I'm editing my card and I fill in my father's name, I should choose "father" from the popup menu.)\
+\
+\pard\tx1080\tx2880\tx4320\tx5760\tx7200\li1080\fi-360\ri-2680\ql\qnatural
+\cf0 1.	In Address Book, select a person who has related names listed in their contact card.\
+2.	Choose 
+\f2\b Make Org Chart
+\f0\b0 , 
+\f2\b Make People Web Chart
+\f0\b0 , or 
+\f2\b Make Family Tree Chart
+\f0\b0  from the 
+\f2\b Scripts
+\f0\b0  menu.\
+3.	Once the script has finished, you may customize the automatically-built chart, or just save or print the document.\
+\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li720\ri-2680\ql\qnatural
+\cf0 To convert the output of the either script into something resembling a standard "rake-style" org chart: First, select all the boxes (the Selection inspector is good for this), and use the Magnets inspector to give them magnets at (only) the top center and bottom center. (In the collection of buttons on the Magnets inspector, the first one in the second row will do this.) Then, select all the lines (again, the Selection inspector helps) and convert them to the orthogonal (right-angles-only) style using the Line inspector.\
+\
+Some issues to be aware of:\
+\pard\tx1080\tx2880\tx4320\tx5760\tx7200\li1080\fi-360\ri-2680\ql\qnatural
+\cf0 \'a5	Your contacts' pictures may not always appear at the correct size in the chart. This will be corrected in a future release.\
+\'a5	OmniGraffle's automatic layout mechanism doesn't know everything about family or organizational relationships, so the layout of the finished chart may not be ideal... but it's a good start towards making your own attractive-looking family tree or org chart.\
+\'a5	The script will explore relationships starting with the person you've selected in Address Book. So, if John's card says his spouse is Jane, but Jane's card doesn't say her spouse is John, you'll get different results based on which of them is selected when you run the script.\
+\'a5	Some of Address Book's relationship options can be ambiguous; for example, the "partner" relationship could be either a business or domestic relationship. The default configuration includes "partners" in the family tree chart but not the org chart, but this can be changed by editing one of the first few lines of the script(s). Open the script(s) in Script Editor and see the comments for details.\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\fs20 \cf0 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li1440\fi-720\ri-2680\ql\qnatural
+
+\f2\b\fs24 \cf2 Release History
+\f0\b0 \cf0 \
+\pard\tx3240\tx4320\tx5760\tx7200\li3240\fi-2520\ri-2680\ql\qnatural
+
+\fs22 \cf0 1.0 (2003/10/29)	Initial public release.\
+1.1 (2006/07/12)	Updated for OmniGraffle 4.1.2.\
+\pard\tx1080\tx2880\tx4320\tx5760\tx7200\li1080\fi-360\ri-2680\ql\qnatural
+\cf0 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li720\ri-2680\ql\qnatural
+\cf0 System requirements: OmniGraffle or OmniGraffle Pro 4.1, Mac OS X 10.3\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2\b\fs28 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+
+\f1\b0\fs24 \cf0 {{\NeXTGraphic omnilogo2.tiff \width2760 \height1180
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+
+\f2\b \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+
+\f0\b0\fs20 \cf0 2707 NE Blakeley St \'e1 Seattle, WA 98105-3118\
+800 315-OMNI \'e1 206 523-4152 \'e1 fax 206 523-5896\
+www.omnigroup.com\
+}
+

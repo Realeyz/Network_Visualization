@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Google Maps API Example: Simple Geocoding</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    var map = null;
+    var geocoder = null;
+
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map_canvas"));
+		map.addControl(new GLargeMapControl());
+		map.addControl(new GMapTypeControl());
+        map.setCenter(new GLatLng(51.52241608253253, 9.6240234375), 5);
+        geocoder = new GClientGeocoder();
+		map.enableScrollWheelZoom();
+      }
+    }
+
+    function showAddress(address,infostring	) {
+      if (geocoder) {
+        geocoder.getLatLng(
+          address,
+          function(point) {
+            if (!point) {
+              alert(address + " not found");
+            } else {
+              map.setCenter(point, 2);
+              var marker = new GMarker(point);
+				GEvent.addListener(marker, "click", function()
+				 {marker.openInfoWindowHtml("<strong>"+infostring+"</strong><br><br>"+address)});
+				
+              map.addOverlay(marker);
+            }
+          }
+        );
+      }
+    }
+    </script>
+  </head>
+
+  <body onload="initialize()" onunload="GUnload()">
+      <div id="map_canvas" style="width: 1000px; height: 600px"></div>
+    </form>
+  </body>
+</html>
